@@ -44,8 +44,6 @@ format:
             opacity: .75;
             margin-left: .5rem;
           }
-
-          /* Scrollable pill row */
           #nav-tabs {
             display: flex;
             gap: 6px;
@@ -58,7 +56,6 @@ format:
           }
           #nav-tabs::-webkit-scrollbar { height: 4px; }
           #nav-tabs::-webkit-scrollbar-thumb { background: rgba(255,255,255,.3); border-radius: 4px; }
-
           .nav-tab {
             flex-shrink: 0;
             background: rgba(255,255,255,.15);
@@ -75,8 +72,6 @@ format:
           }
           .nav-tab:hover { background: rgba(255,255,255,.28); transform: translateY(-1px); }
           .nav-tab.active { background: #fff; color: #5b21b6; border-color: #fff; }
-
-          /* Dropdown subheadings panel */
           #nav-dropdown {
             display: none;
             background: rgba(40, 10, 120, .97);
@@ -128,6 +123,43 @@ format:
           .content-section { display: none; }
           .content-section.visible { display: block; }
 
+          /* ── German Topic Banner ─────────────────── */
+          .topic-banner {
+            background: linear-gradient(135deg, #ede9fe, #fdf4ff);
+            border: 2px solid #c4b5fd;
+            border-radius: 16px;
+            padding: 1rem 1.4rem;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+          .topic-banner .de-word {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #5b21b6;
+          }
+          .topic-banner .de-article {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #9333ea;
+            background: #e9d5ff;
+            border-radius: 6px;
+            padding: 2px 8px;
+            margin-right: 4px;
+          }
+          .topic-banner .en-word {
+            font-size: 1rem;
+            color: #6b7280;
+            font-style: italic;
+          }
+          .topic-banner .pron-word {
+            font-size: .85rem;
+            color: #9333ea;
+            font-family: 'Fira Code', monospace;
+          }
+
           /* Headings */
           h2 {
             color: #5b21b6;
@@ -141,19 +173,6 @@ format:
           h2:first-child { margin-top: 0; }
           h3 { color: #7c3aed; font-weight: 700; margin: 1.5rem 0 .6rem; font-size: 1.1rem; }
           h4 { color: #9333ea; font-weight: 700; margin: 1.2rem 0 .4rem; }
-
-          /* Section anchor headings */
-          .section-title {
-            font-size: 1.9rem;
-            font-weight: 900;
-            color: #3b1fa3;
-            margin-bottom: 1.5rem;
-            padding-bottom: .6rem;
-            border-bottom: 3px solid #e9d5ff;
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-          }
 
           /* Callouts */
           .callout-tip    { border-left: 4px solid #059669 !important; background: #ecfdf5 !important; border-radius: 10px; padding: .9rem 1rem; margin: 1rem 0; }
@@ -214,9 +233,13 @@ format:
           .num-card .word { font-size: .75rem; color: #7c3aed; font-weight: 600; }
           .num-card .pron { font-size: .67rem; color: #9ca3af; font-family:'Fira Code',monospace; }
 
-          /* Alphabet */
-          .alpha-table td:first-child { font-size: 1.2rem; font-weight: 900; color: #5b21b6; }
-          .alpha-table td:nth-child(2){ font-family:'Fira Code',monospace; color:#7c3aed; }
+          /* Alphabet — full highlight for all 26 rows */
+          .alpha-table td:first-child { font-size: 1.15rem; font-weight: 900; color: #5b21b6; }
+          .alpha-table td:nth-child(2),
+          .alpha-table td:nth-child(4),
+          .alpha-table td:nth-child(6) { font-family:'Fira Code',monospace; color:#7c3aed; font-size:.9rem; }
+          .alpha-table td:nth-child(3),
+          .alpha-table td:nth-child(5) { font-size: 1.15rem; font-weight: 900; color: #5b21b6; }
 
           /* Seasons */
           .season-grid { display: grid; grid-template-columns: repeat(4,1fr); gap:12px; margin:1rem 0; }
@@ -242,6 +265,57 @@ format:
           .pronoun-badge { background:linear-gradient(135deg,#5b21b6,#7c3aed); color:#fff; border-radius:50px; padding:.45rem 1.1rem; font-weight:700; font-size:.9rem; display:flex; gap:.5rem; align-items:center; }
           .pronoun-badge .eng { font-weight:400; opacity:.8; font-size:.82rem; }
 
+          /* Number Converter Widget */
+          .num-converter {
+            background: linear-gradient(135deg, #ede9fe, #fdf4ff);
+            border: 2px solid #c4b5fd;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            margin: 1.5rem 0;
+          }
+          .num-converter h4 { color: #5b21b6; font-size: 1.1rem; margin-bottom: 1rem; }
+          .num-converter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+          .num-converter input {
+            flex: 1;
+            min-width: 120px;
+            max-width: 220px;
+            padding: .6rem .9rem;
+            border: 2px solid #c4b5fd;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            color: #3b1fa3;
+            outline: none;
+            transition: border-color .2s;
+          }
+          .num-converter input:focus { border-color: #7c3aed; }
+          .num-converter button {
+            background: linear-gradient(135deg,#5b21b6,#7c3aed);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: .6rem 1.4rem;
+            font-size: 1rem;
+            font-weight: 800;
+            font-family: 'Nunito', sans-serif;
+            cursor: pointer;
+            transition: opacity .15s, transform .12s;
+          }
+          .num-converter button:hover { opacity: .88; transform: translateY(-1px); }
+          .num-converter-result {
+            margin-top: 1rem;
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            border: 2px solid #e9d5ff;
+            display: none;
+          }
+          .num-converter-result .result-number { font-size: 2rem; font-weight: 900; color: #5b21b6; }
+          .num-converter-result .result-word { font-size: 1.1rem; color: #7c3aed; font-weight: 700; margin-top: .3rem; }
+          .num-converter-result .result-pron { font-size: .82rem; color: #9ca3af; font-family: 'Fira Code', monospace; margin-top: .2rem; }
+          .num-converter-error { color: #ef4444; font-size: .9rem; margin-top: .6rem; display: none; }
+
           /* hr */
           hr { border: none; border-top: 2px solid #e9d5ff; margin: 2rem 0; }
 
@@ -255,9 +329,6 @@ format:
 ---
 
 ```{=html}
-<!-- ═══════════════════════════════════════════
-     TOP NAVIGATION BAR
-═══════════════════════════════════════════ -->
 <div id="top-navbar">
   <div id="nav-title">
     🇩🇪 German A1 Language
@@ -265,7 +336,7 @@ format:
   </div>
   <div id="nav-tabs">
     <div class="nav-tab active" data-section="communication" onclick="activateTab(this)">🗣️ Communication</div>
-    <div class="nav-tab" data-section="countries" onclick="activateTab(this)">🌍 Countries & Languages</div>
+    <div class="nav-tab" data-section="countries" onclick="activateTab(this)">🌍 Countries &amp; Languages</div>
     <div class="nav-tab" data-section="personal" onclick="activateTab(this)">👤 Personal Info</div>
     <div class="nav-tab" data-section="numbers" onclick="activateTab(this)">🔢 Numbers</div>
     <div class="nav-tab" data-section="alphabet" onclick="activateTab(this)">🔤 Alphabet</div>
@@ -273,12 +344,11 @@ format:
     <div class="nav-tab" data-section="grammar" onclick="activateTab(this)">📐 Grammar</div>
     <div class="nav-tab" data-section="family" onclick="activateTab(this)">👨‍👩‍👧‍👦 Family</div>
     <div class="nav-tab" data-section="school" onclick="activateTab(this)">🏫 School</div>
-    <div class="nav-tab" data-section="time" onclick="activateTab(this)">📅 Time & Calendar</div>
+    <div class="nav-tab" data-section="time" onclick="activateTab(this)">📅 Time &amp; Calendar</div>
   </div>
   <div id="nav-dropdown"></div>
 </div>
 
-<!-- Section sub-heading map -->
 <script>
 const subheadings = {
   communication: [
@@ -298,7 +368,9 @@ const subheadings = {
   numbers: [
     { label: "0 – 19", id: "sub-num0" },
     { label: "20 – 99", id: "sub-num20" },
-    { label: "Hundreds & Thousands", id: "sub-numlarge" },
+    { label: "Hundreds (100–900)", id: "sub-hundreds" },
+    { label: "Thousands (1,000–10,000)", id: "sub-thousands" },
+    { label: "Number Converter", id: "sub-converter" },
   ],
   alphabet: [
     { label: "The German Alphabet", id: "sub-alpha" },
@@ -337,18 +409,12 @@ const subheadings = {
 };
 
 function activateTab(el) {
-  // Deactivate all tabs
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-
   const sec = el.dataset.section;
-
-  // Show / hide sections
   document.querySelectorAll('.content-section').forEach(s => s.classList.remove('visible'));
   const target = document.getElementById('sec-' + sec);
-  if (target) { target.classList.add('visible'); }
-
-  // Build dropdown
+  if (target) target.classList.add('visible');
   const dropdown = document.getElementById('nav-dropdown');
   const subs = subheadings[sec] || [];
   if (subs.length) {
@@ -360,8 +426,6 @@ function activateTab(el) {
     dropdown.innerHTML = '';
     dropdown.classList.remove('open');
   }
-
-  // Scroll to top of content
   window.scrollTo({ top: document.getElementById('top-navbar').offsetHeight - 2, behavior: 'smooth' });
 }
 
@@ -373,22 +437,86 @@ function scrollToSub(id) {
   window.scrollTo({ top, behavior: 'smooth' });
 }
 
-// Init: show first section on load
+/* ── German Number Converter (0–100,000) ── */
+const ones = ['','ein','zwei','drei','vier','fünf','sechs','sieben','acht','neun',
+               'zehn','elf','zwölf','dreizehn','vierzehn','fünfzehn','sechzehn',
+               'siebzehn','achtzehn','neunzehn'];
+const tens = ['','','zwanzig','dreißig','vierzig','fünfzig','sechzig','siebzig','achtzig','neunzig'];
+
+function numToGerman(n) {
+  if (n === 0) return 'null';
+  if (n === 1) return 'eins';
+  let result = '';
+  if (n >= 100000) return 'hunderttausend';
+  if (n >= 1000) {
+    const t = Math.floor(n / 1000);
+    result += (t === 1 ? 'ein' : numToGerman(t)) + 'tausend';
+    n %= 1000;
+    if (n === 0) return result;
+  }
+  if (n >= 100) {
+    const h = Math.floor(n / 100);
+    result += (h === 1 ? 'ein' : ones[h]) + 'hundert';
+    n %= 100;
+    if (n === 0) return result;
+  }
+  if (n >= 20) {
+    const u = n % 10;
+    const t = Math.floor(n / 10);
+    if (u > 0) result += ones[u] + 'und' + tens[t];
+    else result += tens[t];
+  } else if (n > 0) {
+    result += ones[n];
+  }
+  return result;
+}
+
+/* pronunciation approximation for display */
+const pronMap = {
+  'null':'[nool]','eins':'[ines]','zwei':'[tsvye]','drei':'[drye]','vier':'[feer]',
+  'fünf':'[fuenf]','sechs':'[zeks]','sieben':'[ZEE-ben]','acht':'[akht]','neun':'[noyn]',
+  'zehn':'[tsayn]','elf':'[elf]','zwölf':'[tsvurlf]','zwanzig':'[TSVAN-tsish]',
+  'dreißig':'[DRY-ssish]','vierzig':'[FEER-tsish]','fünfzig':'[FUENF-tsish]',
+  'sechzig':'[ZEKH-tsish]','siebzig':'[ZEEP-tsish]','achtzig':'[AHKH-tsish]',
+  'neunzig':'[NOYN-tsish]','hundert':'[HOON-dert]','tausend':'[TOW-zent]',
+};
+
+function convertNumber() {
+  const input = document.getElementById('num-input');
+  const resultDiv = document.getElementById('num-result');
+  const errorDiv = document.getElementById('num-error');
+  const val = parseInt(input.value, 10);
+  resultDiv.style.display = 'none';
+  errorDiv.style.display = 'none';
+  if (isNaN(val) || val < 0 || val > 100000) {
+    errorDiv.textContent = '⚠️ Please enter a number between 0 and 100,000.';
+    errorDiv.style.display = 'block';
+    return;
+  }
+  const word = numToGerman(val);
+  document.getElementById('res-number').textContent = val.toLocaleString('de-DE');
+  document.getElementById('res-word').textContent = word;
+  /* find a rough pron hint */
+  let pron = '';
+  for (const [k,v] of Object.entries(pronMap)) {
+    if (word === k) { pron = v; break; }
+  }
+  document.getElementById('res-pron').textContent = pron;
+  resultDiv.style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const firstTab = document.querySelector('.nav-tab[data-section="communication"]');
   if (firstTab) activateTab(firstTab);
+  const inp = document.getElementById('num-input');
+  if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') convertNumber(); });
 });
 </script>
 
-<!-- ═══════════════════════════════════════════
-     MAIN CONTENT
-═══════════════════════════════════════════ -->
 <div id="main-content">
-
-  <!-- HERO -->
   <div class="hero">
     <div class="flags">🇩🇪 🇦🇹 🇨🇭</div>
-    <h1>🇩🇪 German A1 — Day 04</h1>
+    <h1>🇩🇪 German A1</h1>
     <p>Complete Study Notes · Beginner Level · With Pronunciation &amp; English Translations</p>
   </div>
 ```
@@ -396,6 +524,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ═══════════════════════════ SECTION: Communication ═══════════════════════════ -->
 
 ::: {#sec-communication .content-section .visible}
+
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Kommunikation</span></div>
+  <div class="pron-word">[ko-moo-ni-ka-TSYOHN]</div>
+  <div class="en-word">Communication</div>
+</div>
+```
 
 ## Introductions {#sub-introductions}
 
@@ -531,6 +667,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ::: {#sec-countries .content-section}
 
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Länder und Sprachen</span></div>
+  <div class="pron-word">[LEND-er oont SHPRAH-khen]</div>
+  <div class="en-word">Countries and Languages</div>
+</div>
+```
+
 ## Countries (Länder) {#sub-countries-list}
 
 ::: {.callout-note}
@@ -583,6 +727,14 @@ Most countries have **NO article**. Exceptions: **die Schweiz**, **die Türkei**
 
 ::: {#sec-personal .content-section}
 
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Persönliche Informationen</span></div>
+  <div class="pron-word">[per-ZURN-likh-eh in-for-ma-TSYOH-nen]</div>
+  <div class="en-word">Personal Information</div>
+</div>
+```
+
 ## Names & Forms of Address {#sub-names}
 
 | German | Pronunciation | English |
@@ -633,6 +785,14 @@ Most countries have **NO article**. Exceptions: **die Schweiz**, **die Türkei**
 
 ::: {#sec-numbers .content-section}
 
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Zahlen</span></div>
+  <div class="pron-word">[TSAH-len]</div>
+  <div class="en-word">Numbers</div>
+</div>
+```
+
 ## 0 – 19 {#sub-num0}
 
 ```{=html}
@@ -670,42 +830,142 @@ Most countries have **NO article**. Exceptions: **die Schweiz**, **die Türkei**
 
 ::: {.callout-note}
 German builds compound numbers by saying the **unit FIRST**, then **'und'**, then the ten.  
-**21 = einundzwanzig** (one-and-twenty) — opposite to English!
+**21 = einundzwanzig** (one-and-twenty) — opposite to English!  
+The **-zig** suffix sounds like **[-tsish]**.
 :::
 
-| # | German | Pronunciation |
-|---|--------|---------------|
-| 20 | zwanzig | [TSVAN-tsikh] |
-| 30 | dreißig | [DRY-ssikh] — special spelling! |
-| 40 | vierzig | [FEER-tsikh] |
-| 50 | fünfzig | [FUENF-tsikh] |
-| 60 | sechzig | [ZEKH-tsikh] |
-| 70 | siebzig | [ZEEP-tsikh] |
-| 80 | achtzig | [AHKH-tsikh] |
-| 90 | neunzig | [NOYN-tsikh] |
-| 21 | einundzwanzig | [INE-oont-tsvan-tsikh] |
-| 35 | fünfunddreißig | [FUENF-oont-dry-ssikh] |
-| 99 | neunundneunzig | [NOYN-oont-noyn-tsikh] |
+```{=html}
+<div class="num-grid">
+  <div class="num-card"><div class="num">20</div><div class="word">zwanzig</div><div class="pron">[TSVAN-tsish]</div></div>
+  <div class="num-card"><div class="num">30</div><div class="word">dreißig</div><div class="pron">[DRY-ssish]</div></div>
+  <div class="num-card"><div class="num">40</div><div class="word">vierzig</div><div class="pron">[FEER-tsish]</div></div>
+  <div class="num-card"><div class="num">50</div><div class="word">fünfzig</div><div class="pron">[FUENF-tsish]</div></div>
+  <div class="num-card"><div class="num">60</div><div class="word">sechzig</div><div class="pron">[ZEKH-tsish]</div></div>
+  <div class="num-card"><div class="num">70</div><div class="word">siebzig</div><div class="pron">[ZEEP-tsish]</div></div>
+  <div class="num-card"><div class="num">80</div><div class="word">achtzig</div><div class="pron">[AHKH-tsish]</div></div>
+  <div class="num-card"><div class="num">90</div><div class="word">neunzig</div><div class="pron">[NOYN-tsish]</div></div>
+  <div class="num-card"><div class="num">21</div><div class="word">einund­zwanzig</div><div class="pron">[INE-oont-TSVAN-tsish]</div></div>
+  <div class="num-card"><div class="num">35</div><div class="word">fünfund­dreißig</div><div class="pron">[FUENF-oont-DRY-ssish]</div></div>
+  <div class="num-card"><div class="num">47</div><div class="word">siebenund­vierzig</div><div class="pron">[ZEE-ben-oont-FEER-tsish]</div></div>
+  <div class="num-card"><div class="num">99</div><div class="word">neunund­neunzig</div><div class="pron">[NOYN-oont-NOYN-tsish]</div></div>
+</div>
+```
+
+::: {.callout-tip}
+**Pattern for -zig numbers:** unit + **und** + ten  
+e.g. 63 = **drei**und**sechzig** · 78 = **acht**und**siebzig**  
+Note: **dreißig** (30) is spelled with **-ßig**, not -zig — it's the only exception!
+:::
 
 ---
 
-## Hundreds & Thousands {#sub-numlarge}
+## Hundreds (100 – 900) {#sub-hundreds}
+
+::: {.callout-note}
+Hundreds are formed by placing the digit before **hundert**.  
+100 can be **einhundert** or just **hundert**. No space is written between parts.
+:::
+
+```{=html}
+<div class="num-grid">
+  <div class="num-card"><div class="num">100</div><div class="word">hundert</div><div class="pron">[HOON-dert]</div></div>
+  <div class="num-card"><div class="num">200</div><div class="word">zwei­hundert</div><div class="pron">[TSVYE-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">300</div><div class="word">drei­hundert</div><div class="pron">[DRYE-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">400</div><div class="word">vier­hundert</div><div class="pron">[FEER-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">500</div><div class="word">fünf­hundert</div><div class="pron">[FUENF-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">600</div><div class="word">sechs­hundert</div><div class="pron">[ZEKS-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">700</div><div class="word">sieben­hundert</div><div class="pron">[ZEE-ben-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">800</div><div class="word">acht­hundert</div><div class="pron">[AHKHT-hoon-dert]</div></div>
+  <div class="num-card"><div class="num">900</div><div class="word">neun­hundert</div><div class="pron">[NOYN-hoon-dert]</div></div>
+</div>
+```
+
+### Combined Hundreds Examples
+
+| # | German | Pattern |
+|---|--------|---------|
+| 101 | einhunderteins | hundert + eins |
+| 115 | einhundertfünfzehn | hundert + fünfzehn |
+| 250 | zweihundertfünfzig | zweihundert + fünfzig |
+| 316 | dreihundertsechzehn | dreihundert + sechzehn |
+| 472 | vierhundertzweiundsiebzig | vierhundert + zweiundsiebzig |
+| 999 | neunhundertneunundneunzig | neunhundert + neunundneunzig |
+
+---
+
+## Thousands (1,000 – 10,000) {#sub-thousands}
+
+::: {.callout-note}
+Thousands are formed by placing the digit before **tausend**.  
+1,000 = **eintausend** or just **tausend**. No space within a compound number.
+:::
+
+```{=html}
+<div class="num-grid">
+  <div class="num-card"><div class="num">1.000</div><div class="word">tausend</div><div class="pron">[TOW-zent]</div></div>
+  <div class="num-card"><div class="num">2.000</div><div class="word">zwei­tausend</div><div class="pron">[TSVYE-tow-zent]</div></div>
+  <div class="num-card"><div class="num">3.000</div><div class="word">drei­tausend</div><div class="pron">[DRYE-tow-zent]</div></div>
+  <div class="num-card"><div class="num">4.000</div><div class="word">vier­tausend</div><div class="pron">[FEER-tow-zent]</div></div>
+  <div class="num-card"><div class="num">5.000</div><div class="word">fünf­tausend</div><div class="pron">[FUENF-tow-zent]</div></div>
+  <div class="num-card"><div class="num">6.000</div><div class="word">sechs­tausend</div><div class="pron">[ZEKS-tow-zent]</div></div>
+  <div class="num-card"><div class="num">7.000</div><div class="word">sieben­tausend</div><div class="pron">[ZEE-ben-tow-zent]</div></div>
+  <div class="num-card"><div class="num">8.000</div><div class="word">acht­tausend</div><div class="pron">[AHKHT-tow-zent]</div></div>
+  <div class="num-card"><div class="num">9.000</div><div class="word">neun­tausend</div><div class="pron">[NOYN-tow-zent]</div></div>
+  <div class="num-card"><div class="num">10.000</div><div class="word">zehn­tausend</div><div class="pron">[TSAYN-tow-zent]</div></div>
+  <div class="num-card" style="border-color:#c4b5fd"><div class="num" style="font-size:1rem">100.000</div><div class="word">hundert­tausend</div><div class="pron">[HOON-dert-tow-zent]</div></div>
+</div>
+```
+
+### Combined Thousands Examples
 
 | # | German |
 |---|--------|
-| 100 | einhundert / hundert |
-| 200 | zweihundert |
-| 1,000 | eintausend / tausend |
-| 10,000 | zehntausend |
+| 1,001 | eintausendeins |
+| 2,500 | zweitausendfünfhundert |
+| 5,732 | fünftausendsiebenhundertzweiunddreißig |
+| 12,000 | zwölftausend |
+| 25,000 | fünfundzwanzigtausend |
+| 75,361 | fünfundsiebzigtausend­dreihundert­einundsechzig |
 | 100,000 | hunderttausend |
-| 123 | einhundertdreiundzwanzig |
-| 5,732 | fünftausend siebenhundert zweiunddreißig |
+
+::: {.callout-tip}
+🇩🇪 **German uses a period as a thousands separator** and a comma as the decimal separator — the opposite of English!  
+1.000 = one thousand · 1,5 = one and a half
+:::
+
+---
+
+## Number Converter {#sub-converter}
+
+```{=html}
+<div class="num-converter">
+  <h4>🔢 Type a number (0 – 100,000) → get the German word</h4>
+  <div class="num-converter-row">
+    <input type="number" id="num-input" min="0" max="100000" placeholder="e.g. 4567" />
+    <button onclick="convertNumber()">Übersetzen →</button>
+  </div>
+  <div class="num-converter-error" id="num-error"></div>
+  <div class="num-converter-result" id="num-result">
+    <div class="result-number" id="res-number"></div>
+    <div class="result-word" id="res-word"></div>
+    <div class="result-pron" id="res-pron"></div>
+  </div>
+</div>
+```
 
 :::
 
 <!-- ═══════════════════════════ SECTION: Alphabet ═══════════════════════════ -->
 
 ::: {#sec-alphabet .content-section}
+
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">das</span><span class="de-word">Alphabet</span></div>
+  <div class="pron-word">[al-fah-BAYT]</div>
+  <div class="en-word">The Alphabet</div>
+</div>
+```
 
 ## The German Alphabet {#sub-alpha}
 
@@ -718,18 +978,24 @@ German has **26 standard letters** plus **4 special characters**: Ä/ä, Ö/ö, 
 <table class="alpha-table">
 <thead><tr><th>Letter</th><th>German Name</th><th>Letter</th><th>German Name</th><th>Letter</th><th>German Name</th></tr></thead>
 <tbody>
-<tr><td>A a</td><td>ah</td><td>J j</td><td>yot</td><td>S s</td><td>ess</td></tr>
-<tr><td>B b</td><td>beh</td><td>K k</td><td>kah</td><td>T t</td><td>teh</td></tr>
-<tr><td>C c</td><td>tseh</td><td>L l</td><td>ell</td><td>U u</td><td>oo</td></tr>
-<tr><td>D d</td><td>deh</td><td>M m</td><td>emm</td><td>V v</td><td>fow</td></tr>
-<tr><td>E e</td><td>eh</td><td>N n</td><td>enn</td><td>W w</td><td>veh</td></tr>
-<tr><td>F f</td><td>eff</td><td>O o</td><td>oh</td><td>X x</td><td>iks</td></tr>
-<tr><td>G g</td><td>geh</td><td>P p</td><td>peh</td><td>Y y</td><td>üp-si-lon</td></tr>
-<tr><td>H h</td><td>hah</td><td>Q q</td><td>koo</td><td>Z z</td><td>tset</td></tr>
-<tr><td>I i</td><td>ee</td><td>R r</td><td>err</td><td></td><td></td></tr>
+<tr><td>A a</td><td>ah</td>        <td>J j</td><td>yot</td>      <td>S s</td><td>ess</td></tr>
+<tr><td>B b</td><td>beh</td>       <td>K k</td><td>kah</td>      <td>T t</td><td>teh</td></tr>
+<tr><td>C c</td><td>tseh</td>      <td>L l</td><td>ell</td>      <td>U u</td><td>oo</td></tr>
+<tr><td>D d</td><td>deh</td>       <td>M m</td><td>emm</td>      <td>V v</td><td>fow</td></tr>
+<tr><td>E e</td><td>eh</td>        <td>N n</td><td>enn</td>      <td>W w</td><td>veh</td></tr>
+<tr><td>F f</td><td>eff</td>       <td>O o</td><td>oh</td>       <td>X x</td><td>iks</td></tr>
+<tr><td>G g</td><td>geh</td>       <td>P p</td><td>peh</td>      <td>Y y</td><td>üp-si-lon</td></tr>
+<tr><td>H h</td><td>hah</td>       <td>Q q</td><td>koo</td>      <td>Z z</td><td>tset</td></tr>
+<tr><td>I i</td><td>ee</td>        <td>R r</td><td>err</td>      <td></td><td></td></tr>
 </tbody>
 </table>
 ```
+
+::: {.callout-tip}
+**Spelling out a name in German:** Germans use city names as reference.  
+e.g. "H wie Hamburg, E wie Emil, R wie Richard" = H-E-R  
+Use: A-Anton, B-Berta, C-Cäsar, D-Dora, E-Emil, F-Friedrich, G-Gustav, H-Heinrich, I-Ida, J-Julius, K-Kaufmann, L-Ludwig, M-Martha, N-Nordpol, O-Otto, P-Paula, Q-Quelle, R-Richard, S-Samuel, T-Theodor, U-Ulrich, V-Viktor, W-Wilhelm, X-Xanthippe, Y-Ypsilon, Z-Zacharias
+:::
 
 ---
 
@@ -752,6 +1018,14 @@ Example: Müller = **Mueller**, Straße = **Strasse**.
 <!-- ═══════════════════════════ SECTION: Colors ═══════════════════════════ -->
 
 ::: {#sec-colors .content-section}
+
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Farben</span></div>
+  <div class="pron-word">[FAR-ben]</div>
+  <div class="en-word">Colors / Colours</div>
+</div>
+```
 
 ## Color Swatches {#sub-colorswatches}
 
@@ -794,6 +1068,14 @@ Add **hell-** (light) or **dunkel-** (dark) as a prefix:
 <!-- ═══════════════════════════ SECTION: Grammar ═══════════════════════════ -->
 
 ::: {#sec-grammar .content-section}
+
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Grammatik</span></div>
+  <div class="pron-word">[gra-MAH-tik]</div>
+  <div class="en-word">Grammar</div>
+</div>
+```
 
 ## Verbs: sein & haben {#sub-seinhabn}
 
@@ -1054,6 +1336,14 @@ Context and verb conjugation tell them apart.
 
 ::: {#sec-family .content-section}
 
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Familie</span></div>
+  <div class="pron-word">[fah-MEE-lee-eh]</div>
+  <div class="en-word">Family</div>
+</div>
+```
+
 ## Family Members {#sub-familymembers}
 
 ```{=html}
@@ -1132,6 +1422,14 @@ Context and verb conjugation tell them apart.
 <!-- ═══════════════════════════ SECTION: School ═══════════════════════════ -->
 
 ::: {#sec-school .content-section}
+
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Schule</span></div>
+  <div class="pron-word">[SHOO-leh]</div>
+  <div class="en-word">School</div>
+</div>
+```
 
 ## School Vocabulary {#sub-schoolvocab}
 
@@ -1234,6 +1532,14 @@ Context and verb conjugation tell them apart.
 
 ::: {#sec-time .content-section}
 
+```{=html}
+<div class="topic-banner">
+  <div><span class="de-article">die</span><span class="de-word">Zeit und der Kalender</span></div>
+  <div class="pron-word">[tsyte oont dare kah-LEN-der]</div>
+  <div class="en-word">Time and Calendar</div>
+</div>
+```
+
 ## Days of the Week {#sub-days}
 
 ::: {.callout-note}
@@ -1283,30 +1589,10 @@ Months are **masculine (der)**. Use **'im Januar'** to say 'in January'.
 
 ```{=html}
 <div class="season-grid">
-  <div class="season-card winter">
-    <div class="icon">❄️</div>
-    <div class="name">der Winter</div>
-    <div class="eng">winter</div>
-    <div class="months">Dez · Jan · Feb</div>
-  </div>
-  <div class="season-card spring">
-    <div class="icon">🌸</div>
-    <div class="name">der Frühling</div>
-    <div class="eng">spring</div>
-    <div class="months">Mär · Apr · Mai</div>
-  </div>
-  <div class="season-card summer">
-    <div class="icon">☀️</div>
-    <div class="name">der Sommer</div>
-    <div class="eng">summer</div>
-    <div class="months">Jun · Jul · Aug</div>
-  </div>
-  <div class="season-card autumn">
-    <div class="icon">🍂</div>
-    <div class="name">der Herbst</div>
-    <div class="eng">autumn / fall</div>
-    <div class="months">Sep · Okt · Nov</div>
-  </div>
+  <div class="season-card winter"><div class="icon">❄️</div><div class="name">der Winter</div><div class="eng">winter</div><div class="months">Dez · Jan · Feb</div></div>
+  <div class="season-card spring"><div class="icon">🌸</div><div class="name">der Frühling</div><div class="eng">spring</div><div class="months">Mär · Apr · Mai</div></div>
+  <div class="season-card summer"><div class="icon">☀️</div><div class="name">der Sommer</div><div class="eng">summer</div><div class="months">Jun · Jul · Aug</div></div>
+  <div class="season-card autumn"><div class="icon">🍂</div><div class="name">der Herbst</div><div class="eng">autumn / fall</div><div class="months">Sep · Okt · Nov</div></div>
 </div>
 ```
 
@@ -1386,9 +1672,8 @@ It means *'half [on the way to] eight'*.
 :::
 
 ```{=html}
-<!-- Footer -->
 <div style="text-align:center;margin-top:3rem;padding:1.5rem;color:#9333ea;font-size:.9rem;">
-  🎉 <strong>Herzlichen Glückwunsch</strong> — you've reviewed all of Day 04! Keep practising every day. <em>Viel Erfolg!</em> (Good luck!)
+  🎉 <strong>Herzlichen Glückwunsch</strong> — you've reviewed all sections! Keep practising every day. <em>Viel Erfolg!</em> (Good luck!)
 </div>
 </div><!-- /main-content -->
 ```
