@@ -514,6 +514,7 @@ const subheadings = {
   family: [
     { label: "Family Members", id: "sub-familymembers" },
     { label: "Possessive Sentences", id: "sub-familysent" },
+    { label: "Possessives with Nouns (Class)", id: "sub-possnouns" },
   ],
   school: [
     { label: "School Vocabulary", id: "sub-schoolvocab" },
@@ -521,6 +522,7 @@ const subheadings = {
     { label: "Timetable Phrases", id: "sub-timetable" },
     { label: "Classroom Objects", id: "sub-classobj" },
     { label: "Classroom Language", id: "sub-classlang" },
+    { label: "Class Exercises (Notebook)", id: "sub-classexercise" },
   ],
   time: [
     { label: "Days of the Week", id: "sub-days" },
@@ -528,6 +530,9 @@ const subheadings = {
     { label: "Seasons", id: "sub-seasons" },
     { label: "Time Expressions", id: "sub-timeexpr" },
     { label: "Telling the Time", id: "sub-telling" },
+    { label: "von … bis / ab (Ranges)", id: "sub-vonbis" },
+    { label: "Time Prepositions: um / im / am", id: "sub-timeprep" },
+    { label: "Example Sentences", id: "sub-timesentences" },
   ],
   komposita: [
     { label: "Nomen + Nomen", id: "sub-komp-nn" },
@@ -1396,6 +1401,37 @@ The plural article for ALL genders is **'die'**. Always learn the article with e
 | **a/an** (indefinite) | **ein** | **eine** | **ein** | — |
 | **not a / no** (negation) | **kein** | **keine** | **kein** | **keine** |
 
+### Article Colour Code
+
+::: {.callout-tip}
+Use these colours consistently in your notes — it's one of the most powerful ways to remember gender!
+:::
+
+```{=html}
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0;">
+  <div style="background:#dbeafe;border:3px solid #2563eb;border-radius:12px;padding:.8rem 1.3rem;text-align:center;flex:1;min-width:130px;">
+    <div style="font-size:1.4rem;font-weight:900;color:#1d4ed8">der</div>
+    <div style="font-size:.88rem;font-weight:700;color:#1e40af">Masculine</div>
+    <div style="font-size:.78rem;color:#3b82f6;margin-top:3px">🖊️ Write in <strong>Blue</strong></div>
+  </div>
+  <div style="background:#fce7f3;border:3px solid #ec4899;border-radius:12px;padding:.8rem 1.3rem;text-align:center;flex:1;min-width:130px;">
+    <div style="font-size:1.4rem;font-weight:900;color:#be185d">die</div>
+    <div style="font-size:.88rem;font-weight:700;color:#9d174d">Feminine</div>
+    <div style="font-size:.78rem;color:#ec4899;margin-top:3px">🖊️ Write in <strong>Red</strong></div>
+  </div>
+  <div style="background:#d1fae5;border:3px solid #10b981;border-radius:12px;padding:.8rem 1.3rem;text-align:center;flex:1;min-width:130px;">
+    <div style="font-size:1.4rem;font-weight:900;color:#065f46">das</div>
+    <div style="font-size:.88rem;font-weight:700;color:#047857">Neuter</div>
+    <div style="font-size:.78rem;color:#10b981;margin-top:3px">🖊️ Write in <strong>Green</strong></div>
+  </div>
+  <div style="background:#f3f4f6;border:3px solid #374151;border-radius:12px;padding:.8rem 1.3rem;text-align:center;flex:1;min-width:130px;">
+    <div style="font-size:1.4rem;font-weight:900;color:#111827">die</div>
+    <div style="font-size:.88rem;font-weight:700;color:#374151">Plural</div>
+    <div style="font-size:.78rem;color:#6b7280;margin-top:3px">🖊️ Write in <strong>Black</strong></div>
+  </div>
+</div>
+```
+
 ### Example Sentences
 
 | German | English |
@@ -1553,6 +1589,111 @@ Context and verb conjugation tell them apart.
 | Das ist meine Brille. | This is my glasses. |
 | Das ist mein Kind. | This is my child. |
 
+---
+
+## Possessives with Nouns — Class Practice {#sub-possnouns}
+
+::: {.callout-note}
+The possessive ending changes based on the **gender of the noun** it describes.  
+**mein** (der/das) · **meine** (die / plural) — same pattern for dein, sein, ihr, unser, euer, Ihr.
+:::
+
+```{=html}
+<div style="display:flex;flex-direction:column;gap:9px;margin:1rem 0;">
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">1.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Mein Name ist Anna.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#3b82f6;font-weight:700;background:#eff6ff;border-radius:5px;padding:1px 7px">der Name</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">My name is Anna.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">2.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Wie ist deine Telefonnummer?</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#ec4899;font-weight:700;background:#fdf2f8;border-radius:5px;padding:1px 7px">die Telefonnummer</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">What is your phone number?</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">3.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Meine Adresse ist Temple Straße, Kandy.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#ec4899;font-weight:700;background:#fdf2f8;border-radius:5px;padding:1px 7px">die Adresse</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">My address is Temple Street, Kandy.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">4.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Mein Haus ist groß.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#10b981;font-weight:700;background:#ecfdf5;border-radius:5px;padding:1px 7px">das Haus</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">My house is big.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">5.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Mein Handy ist neu.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#10b981;font-weight:700;background:#ecfdf5;border-radius:5px;padding:1px 7px">das Handy</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">My mobile phone is new.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">6.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Unser Deutschkurs ist am Donnerstag.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#3b82f6;font-weight:700;background:#eff6ff;border-radius:5px;padding:1px 7px">der Deutschkurs</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">Our German course is on Thursday.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">7.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Mein Kind ist fünf Jahre alt.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#10b981;font-weight:700;background:#ecfdf5;border-radius:5px;padding:1px 7px">das Kind</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">My child is five years old.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">8.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Sein Auto ist neu.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#10b981;font-weight:700;background:#ecfdf5;border-radius:5px;padding:1px 7px">das Auto</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">His car is new.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">9.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Eure Kinder sind sehr gut.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#374151;font-weight:700;background:#f3f4f6;border-radius:5px;padding:1px 7px">die Kinder (pl.)</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">Your (plural) children are very good.</div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:11px;padding:.7rem 1rem;display:flex;gap:1rem;align-items:baseline;border:1.5px solid #e9d5ff;box-shadow:0 1px 6px rgba(124,58,237,.07)">
+    <span style="font-weight:800;color:#2d2250;font-size:.96rem;min-width:24px">10.</span>
+    <div>
+      <span style="font-weight:800;color:#2d2250">Ihr Computer ist alt.</span>
+      <span style="margin-left:.6rem;font-size:.8rem;color:#3b82f6;font-weight:700;background:#eff6ff;border-radius:5px;padding:1px 7px">der Computer</span>
+      <div style="font-size:.8rem;color:#6b7280;margin-top:2px">Her / Their computer is old.</div>
+    </div>
+  </div>
+
+</div>
+```
+
 :::
 
 <!-- ═══════════════════════════ SECTION: School ═══════════════════════════ -->
@@ -1661,6 +1802,82 @@ Context and verb conjugation tell them apart.
 | Was sind die Hausaufgaben? | What is the homework? |
 | Wann ist die Pause? | When is the break? |
 | Darf ich kurz auf die Toilette gehen? | May I quickly go to the toilet? |
+
+---
+
+## Class Exercises — Bitte schreiben Sie die Sätze {#sub-classexercise}
+
+::: {.callout-tip}
+These sentence patterns come from class notebook exercises. Each picture prompt shows an object, and you practise **Ist das ein/eine …?** (singular) and **Sind das …?** (plural).
+:::
+
+### Pattern: Singular — Ist das ein …? / Nein, das ist kein …
+
+```{=html}
+<div style="display:flex;flex-direction:column;gap:12px;margin:1rem 0;">
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">das Auto / der Bus 🚗</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Ist das ein Auto?</span> <span style="color:#6b7280;font-size:.88rem">— Is that a car?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Ja, das ist ein Auto.</span> <span style="color:#6b7280;font-size:.88rem">— Yes, that is a car.</span></div>
+    <hr style="border-color:#e9d5ff;margin:.5rem 0">
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Ist das ein Bus?</span> <span style="color:#6b7280;font-size:.88rem">— Is that a bus?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Nein, das ist kein Bus. Das ist ein Auto.</span> <span style="color:#6b7280;font-size:.88rem">— No, that is not a bus. That is a car.</span></div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">der Mann / die Frau 🧍</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Ist das eine Frau?</span> <span style="color:#6b7280;font-size:.88rem">— Is that a woman?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Nein, das ist keine Frau. Das ist ein Mann.</span> <span style="color:#6b7280;font-size:.88rem">— No, that is not a woman. That is a man.</span></div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">der Computer / das Buch 💻</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Ist das ein Buch?</span> <span style="color:#6b7280;font-size:.88rem">— Is that a book?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Nein, das ist kein Buch. Das ist ein Computer.</span> <span style="color:#6b7280;font-size:.88rem">— No, that is not a book. That is a computer.</span></div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">der Bleistift / die Schere ✏️</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Ist das eine Schere?</span> <span style="color:#6b7280;font-size:.88rem">— Is that a pair of scissors?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Nein, das ist keine Schere. Das ist ein Bleistift.</span> <span style="color:#6b7280;font-size:.88rem">— No, that is not scissors. That is a pencil.</span></div>
+  </div>
+
+</div>
+```
+
+### Pattern: Plural — Sind das …? / Nein, das sind keine …
+
+```{=html}
+<div style="display:flex;flex-direction:column;gap:12px;margin:1rem 0;">
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">die Flaschen 🍾🍾🍾</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Sind das Flaschen?</span> <span style="color:#6b7280;font-size:.88rem">— Are those bottles?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Ja, das sind Flaschen.</span> <span style="color:#6b7280;font-size:.88rem">— Yes, those are bottles.</span></div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #e9d5ff;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:.78rem;font-weight:700;color:#9333ea;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">die Flaschen / die Kulis 🍾 / 🖊️</div>
+    <div style="margin:.2rem 0"><span style="color:#5b21b6;font-weight:700">Sind das Kulis?</span> <span style="color:#6b7280;font-size:.88rem">— Are those ballpoint pens?</span></div>
+    <div style="margin:.2rem 0"><span style="color:#0369a1;font-weight:700">Nein, das sind keine Kulis. Das sind Flaschen.</span> <span style="color:#6b7280;font-size:.88rem">— No, those are not pens. Those are bottles.</span></div>
+  </div>
+
+</div>
+```
+
+::: {.callout-note}
+**Key grammar note — kein / keine:**  
+Use **kein** to negate nouns with **der** or **das** articles.  
+Use **keine** to negate nouns with **die** articles (including all plurals).
+
+| Article | Positive | Negative |
+|---------|----------|----------|
+| der (m) | ein Mann | kein Mann |
+| die (f) | eine Frau | keine Frau |
+| das (n) | ein Auto | kein Auto |
+| Plural | — Flaschen | keine Flaschen |
+:::
 
 :::
 
@@ -1804,6 +2021,182 @@ It means *'half [on the way to] eight'*.
 | der Abend | [AH-bent] | evening |
 | die Nacht | [nakht] | night |
 | die Mitternacht | [MIT-ter-nakht] | midnight |
+
+---
+
+## von … bis / ab — Time Ranges {#sub-vonbis}
+
+::: {.callout-note}
+Use **von … bis** to say *from … to/until* and **ab** for *from [a point] onward*.
+Use **bis** alone for *until / up to*.
+:::
+
+```{=html}
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin:1rem 0;">
+
+  <div style="background:#fff;border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.2rem;font-weight:900;color:#5b21b6;margin-bottom:.3rem">von … bis</div>
+    <div style="font-size:.88rem;color:#6b7280;margin-bottom:.6rem"><em>from … to / until</em> — a defined range</div>
+    <div style="font-size:.92rem;line-height:1.7">
+      <span style="color:#5b21b6;font-weight:700">Von</span> Montag <span style="color:#5b21b6;font-weight:700">bis</span> Freitag<br>
+      <span style="color:#9ca3af;font-size:.82rem">Monday to Friday</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Von</span> 7 Uhr <span style="color:#5b21b6;font-weight:700">bis</span> 12 Uhr<br>
+      <span style="color:#9ca3af;font-size:.82rem">from 7 o'clock until 12 o'clock</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Von</span> Dienstag <span style="color:#5b21b6;font-weight:700">bis</span> Freitag<br>
+      <span style="color:#9ca3af;font-size:.82rem">from Tuesday until Friday</span>
+    </div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.2rem;font-weight:900;color:#5b21b6;margin-bottom:.3rem">bis</div>
+    <div style="font-size:.88rem;color:#6b7280;margin-bottom:.6rem"><em>until / up to / by</em> — end point only</div>
+    <div style="font-size:.92rem;line-height:1.7">
+      <span style="color:#5b21b6;font-weight:700">Bis</span> Mitternacht<br>
+      <span style="color:#9ca3af;font-size:.82rem">until midnight</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Bis</span> 24 Uhr / 00.00 Uhr<br>
+      <span style="color:#9ca3af;font-size:.82rem">until midnight (24:00)</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Bis</span> nächste Woche!<br>
+      <span style="color:#9ca3af;font-size:.82rem">Until next week! (see you next week)</span>
+    </div>
+  </div>
+
+  <div style="background:#fff;border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.2rem;font-weight:900;color:#5b21b6;margin-bottom:.3rem">ab</div>
+    <div style="font-size:.88rem;color:#6b7280;margin-bottom:.6rem"><em>from … onward / starting from</em> — open end</div>
+    <div style="font-size:.92rem;line-height:1.7">
+      Ich habe <span style="color:#5b21b6;font-weight:700">ab</span> 10 Uhr frei.<br>
+      <span style="color:#9ca3af;font-size:.82rem">I'm free from 10 o'clock (onward).</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Ab</span> morgen arbeite ich nicht.<br>
+      <span style="color:#9ca3af;font-size:.82rem">From tomorrow onward I'm not working.</span><br><br>
+      <span style="color:#5b21b6;font-weight:700">Ab</span> Januar lerne ich Deutsch.<br>
+      <span style="color:#9ca3af;font-size:.82rem">Starting from January I'm learning German.</span>
+    </div>
+  </div>
+
+</div>
+```
+
+| Preposition | Use | Example | English |
+|-------------|-----|---------|---------|
+| **von** | start of range | von 8 Uhr | from 8 o'clock |
+| **bis** | end of range / deadline | bis 12 Uhr | until 12 o'clock |
+| **von … bis** | full range | von 8 bis 12 Uhr | from 8 to 12 |
+| **ab** | from a point onward (open) | ab 10 Uhr | from 10 o'clock onward |
+
+---
+
+## Time Prepositions: um / im / am {#sub-timeprep}
+
+::: {.callout-important}
+Three small words do a lot of work with time in German. Choose the right one based on what you are talking about!
+:::
+
+```{=html}
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:1rem 0;">
+
+  <div style="background:linear-gradient(135deg,#ede9fe,#fdf4ff);border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.3rem;font-weight:900;color:#5b21b6">um</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-bottom:.5rem"><em>at (a specific clock time)</em></div>
+    <div style="font-size:.88rem;line-height:1.8">
+      um <strong>8 Uhr</strong> — at 8 o'clock<br>
+      um <strong>10.30 Uhr</strong> — at 10:30<br>
+      um <strong>Mitternacht</strong> — at midnight<br>
+      um <strong>Mittag</strong> — at noon
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#ede9fe,#fdf4ff);border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.3rem;font-weight:900;color:#5b21b6">am</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-bottom:.5rem"><em>on (a day or part of day)</em> — am = an + dem</div>
+    <div style="font-size:.88rem;line-height:1.8">
+      am <strong>Montag</strong> — on Monday<br>
+      am <strong>Donnerstag</strong> — on Thursday<br>
+      am <strong>Wochenende</strong> — at the weekend<br>
+      am <strong>Morgen / Abend</strong> — in the morning / evening
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#ede9fe,#fdf4ff);border:2px solid #c4b5fd;border-radius:14px;padding:1rem 1.2rem;">
+    <div style="font-size:1.3rem;font-weight:900;color:#5b21b6">im</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-bottom:.5rem"><em>in (a month or season)</em> — im = in + dem</div>
+    <div style="font-size:.88rem;line-height:1.8">
+      im <strong>Januar</strong> — in January<br>
+      im <strong>August</strong> — in August<br>
+      im <strong>Sommer</strong> — in summer<br>
+      im <strong>Winter</strong> — in winter
+    </div>
+  </div>
+
+</div>
+```
+
+| What | Preposition | Example |
+|------|-------------|---------|
+| Clock time | **um** | um 22 Uhr |
+| Day of week | **am** | am Donnerstag |
+| Weekend | **am** | am Wochenende |
+| Month | **im** | im August |
+| Season | **im** | im Sommer |
+| Day period (Abend etc.) | **heute** + period | heute Abend |
+
+---
+
+## Example Sentences with Time {#sub-timesentences}
+
+::: {.callout-tip}
+These sentences practise **um**, **am**, **im**, **von…bis**, **ab**, and **bis** — all from class!
+:::
+
+```{=html}
+<div style="display:flex;flex-direction:column;gap:10px;margin:1rem 0;">
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Ich komme heute <span style="color:#7c3aed">um 22.00 Uhr</span>.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">I'm coming today at 22:00. <span style="color:#9ca3af">→ also: Ich komme heute Abend um 10 Uhr.</span></div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Wir arbeiten <span style="color:#7c3aed">von 7 Uhr bis 12 Uhr</span>.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">We work from 7 o'clock until 12 o'clock.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Wir lernen Deutsch <span style="color:#7c3aed">bis Mitternacht</span>. / <span style="color:#7c3aed">bis 00.00 Uhr</span>. / <span style="color:#7c3aed">bis 24 Uhr</span>.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">We're learning German until midnight.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Wir fliegen <span style="color:#7c3aed">im Sommer</span> nach Sri Lanka.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">We're flying to Sri Lanka in the summer.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Ich arbeite nicht <span style="color:#7c3aed">am Wochenende</span>.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">I don't work at the weekend.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Der Deutschkurs ist <span style="color:#7c3aed">am Donnerstag</span>.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">The German course is on Thursday.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Mein Geburtstag ist <span style="color:#7c3aed">im August</span>. / Ich habe <span style="color:#7c3aed">im August</span> Geburtstag.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">My birthday is in August. / I have my birthday in August.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem">Ich habe <span style="color:#7c3aed">ab 10 Uhr</span> frei.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">I'm free from 10 o'clock onward.</div>
+  </div>
+
+  <div style="background:#fff;border-radius:12px;padding:.75rem 1.1rem;border-left:5px solid #7c3aed;box-shadow:0 2px 8px rgba(124,58,237,.08)">
+    <div style="font-weight:800;color:#2d2250;font-size:.97rem"><span style="color:#7c3aed">Von Dienstag bis Freitag</span> koche ich nicht.</div>
+    <div style="font-size:.82rem;color:#6b7280;margin-top:2px">From Tuesday to Friday I don't cook. <em>(inverted word order — time phrase at position 1)</em></div>
+  </div>
+
+</div>
+```
 
 :::
 
