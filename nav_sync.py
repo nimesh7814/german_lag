@@ -2,10 +2,11 @@
 """
 nav_sync.py  —  Regenerate AUTO-NAV blocks in every pages/*.qmd
 Can be run from any directory — always works relative to this script's location.
+
+Tab order: all regular pages alphabetically, then flashcard/game pages pinned at the end.
 """
 import os, re, glob
 
-# Always work relative to where this script lives
 script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
@@ -16,6 +17,9 @@ if not qmd_files:
     print("  ⚠  No .qmd files found in pages/")
     exit(0)
 
+# Pages to pin at the far right of the nav bar (in this order)
+PINNED_LAST = ["flashcards"]
+
 tabs = []
 for path in qmd_files:
     key = os.path.splitext(os.path.basename(path))[0]
@@ -24,6 +28,15 @@ for path in qmd_files:
     m = re.search(r'^title:\s*"(.+?)"', content, re.MULTILINE)
     title = m.group(1) if m else key.title()
     tabs.append((key, title, path))
+
+# Sort: regular pages first (alpha), pinned pages at the end in defined order
+def sort_key(tab):
+    key = tab[0]
+    if key in PINNED_LAST:
+        return (1, PINNED_LAST.index(key))
+    return (0, key)
+
+tabs.sort(key=sort_key)
 
 NAV_COMMENT = "<!-- AUTO-NAV-START -->"
 NAV_END     = "<!-- AUTO-NAV-END -->"
